@@ -84,9 +84,9 @@ fun LemonadeApp() {
             when (currentStep) {
                 1 -> {
                     LemonTextAndImage(
-                        textLabelResourceId = R.string.lemon_select,
+                        textLabelResourceId = R.string.select_lemon,
                         drawableResourceId = R.drawable.lemon_tree,
-                        contentDescriptionResourceId = R.string.lemon_tree_content_description,
+                        contentDescriptionResourceId = R.string.lemon_tree,
                         onImageClick = {
                             currentStep = 2
                             squeezeCount = (2..4).random()
@@ -95,9 +95,9 @@ fun LemonadeApp() {
                 }
                 2 -> {
                     LemonTextAndImage(
-                        textLabelResourceId = R.string.lemon_squeeze,
+                        textLabelResourceId = R.string.squeeze_lemon,
                         drawableResourceId = R.drawable.lemon_squeeze,
-                        contentDescriptionResourceId = R.string.lemon_content_description,
+                        contentDescriptionResourceId = R.string.lemon,
                         onImageClick = {
                             squeezeCount--
                             if (squeezeCount == 0) {
@@ -109,9 +109,9 @@ fun LemonadeApp() {
 
                 3 -> {
                     LemonTextAndImage(
-                        textLabelResourceId = R.string.lemon_drink,
+                        textLabelResourceId = R.string.drink_lemonade,
                         drawableResourceId = R.drawable.lemon_drink,
-                        contentDescriptionResourceId = R.string.lemonade_content_description,
+                        contentDescriptionResourceId = R.string.galass_lemonade,
                         onImageClick = {
                             currentStep = 4
                         }
@@ -119,9 +119,9 @@ fun LemonadeApp() {
                 }
                 4 -> {
                     LemonTextAndImage(
-                        textLabelResourceId = R.string.lemon_empty_glass,
+                        textLabelResourceId = R.string.start_again,
                         drawableResourceId = R.drawable.lemon_restart,
-                        contentDescriptionResourceId = R.string.empty_glass_content_description,
+                        contentDescriptionResourceId = R.string.empty_glass,
                         onImageClick = {
                             currentStep = 1
                         }
